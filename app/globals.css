@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.link-with-hover-line {
+  position: relative;
+  display: inline-block;
+}
+
+.link-with-hover-line::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3f6212;
+  transition: width 0.3s ease-in-out;
+}
+
+.link-with-hover-line:hover::after {
+  width: 100%;
+}
