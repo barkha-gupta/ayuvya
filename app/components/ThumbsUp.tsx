@@ -8,7 +8,7 @@ const ThumbsUp = ({ customClass }: StarProps) => {
       viewBox="0 0 24 24"
       fill="none"
       strokeWidth="1.5"
-      className={`size-10 ${customClass} stroke-gray-300`}
+      className={`size-10 stroke-gray-300 ${customClass} `}
     >
       <path
         strokeLinecap="round"

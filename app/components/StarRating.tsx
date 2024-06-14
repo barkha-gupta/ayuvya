@@ -21,7 +21,7 @@ const StarRating: React.FC<StarRatingProps> = ({ onClick, rating }) => {
             />
             <Star
               customClass={`cursor-pointer ${
-                ratingValue <= rating ? "fill-[#ffc107] stroke-[#ffc107]" : ""
+                ratingValue <= rating ? "fill-[#ffc107] stroke-yellow-400" : ""
               }  `}
             />
           </label>

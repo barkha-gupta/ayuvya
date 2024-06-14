@@ -18,7 +18,7 @@ const Recommend: React.FC<RecommendProps> = ({ onClick, isRecommended }) => {
         />
         <ThumbsDown
           customClass={`cursor-pointer  ${
-            isRecommended === false ? "fill-red-500 stroke-red-500" : ""
+            isRecommended === false ? "fill-red-500 stroke-red-600" : ""
           }`}
         />
         <p>No</p>
@@ -33,7 +33,7 @@ const Recommend: React.FC<RecommendProps> = ({ onClick, isRecommended }) => {
         />
         <ThumbsUp
           customClass={`cursor-pointer ${
-            isRecommended === true ? "fill-green-500 stroke-green-500" : ""
+            isRecommended === true ? "fill-green-500 stroke-green-600" : ""
           }`}
         />
         <p>Yes</p>
