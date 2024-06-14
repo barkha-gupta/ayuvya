@@ -7,9 +7,9 @@ interface CardProps {
 }
 const Card = ({ heading, description, children }: CardProps) => {
   return (
-    <div>
-      <h3>{heading}</h3>
-      <p>{description}</p>
+    <div className="flex flex-col flex-wrap gap-1">
+      <h3 className="font-[600]">{heading}</h3>
+      <p className="text-slate-500">{description}</p>
       {children}
     </div>
   );

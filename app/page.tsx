@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <p>
+      <p className="mt-2 text-center text-wrap">
         Like our products??{" "}
         <Link href={"/review"}>
           <span className="link-with-hover-line hover:text-lime-950">

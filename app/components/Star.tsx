@@ -8,8 +8,7 @@ const Star = ({ customClass }: StarProps) => {
       fill="none"
       viewBox="0 0 24 24"
       strokeWidth="1.5"
-      stroke="currentColor"
-      className={`size-10 ${customClass}`}
+      className={`size-10 ${customClass} stroke-gray-300`}
     >
       <path
         strokeLinecap="round"

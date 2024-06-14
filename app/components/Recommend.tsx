@@ -1,17 +1,26 @@
 import ThumbsDown from "./ThumbsDown";
 import ThumbsUp from "./ThumbsUp";
 
-const Recommend = () => {
+interface RecommendProps {
+  onClick: (isRecommended: boolean) => void;
+  isRecommended: any;
+}
+const Recommend: React.FC<RecommendProps> = ({ onClick, isRecommended }) => {
   return (
-    <div className="flex gap-10">
+    <div className="flex gap-8">
       <label>
         <input
           type="radio"
           name="recommendation"
           value={"thumbsUp"}
           className="hidden"
+          onClick={() => onClick(false)}
         />
-        <ThumbsDown customClass="cursor-pointer" />
+        <ThumbsDown
+          customClass={`cursor-pointer  ${
+            isRecommended === false ? "fill-red-500 stroke-red-500" : ""
+          }`}
+        />
         <p>No</p>
       </label>
       <label>
@@ -20,8 +29,13 @@ const Recommend = () => {
           name="recommendation"
           value={"thumbsDown"}
           className="hidden"
+          onClick={() => onClick(true)}
         />
-        <ThumbsUp customClass="cursor-pointer" />
+        <ThumbsUp
+          customClass={`cursor-pointer ${
+            isRecommended === true ? "fill-green-500 stroke-green-500" : ""
+          }`}
+        />
         <p>Yes</p>
       </label>
     </div>
